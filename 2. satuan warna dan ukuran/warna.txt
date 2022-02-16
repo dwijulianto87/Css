@@ -1,0 +1,9 @@
+
+
+# colorName : red, blue....
+
+# hexadecimal : #fe0000, #20bbaa, #222222....
+
+# rgba(red, green, blue, alpha) : rgba(0,0,0,0)
+
+# HSL (hanya di CSS3) : hsl(104, 82%, 50%);

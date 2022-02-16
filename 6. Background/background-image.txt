@@ -1,0 +1,17 @@
+
+
+# background-image -> mengatur gambar yang akan digunakan pada backgound
+# Background-position -> mengatur posisi gambar pada backgound
+# Background-repeat -> mengatur jenis pengulangan gambar pada backgound
+
+- Download pattern / pola untuk background halaman
+http://subtlepatterns.com
+
+
+Contoh : 
+
+p{ 
+background-image: url(gambar/bg1.jpg); 
+background-repeat: repeat-x;
+background-position: top right; 
+}

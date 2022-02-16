@@ -1,0 +1,8 @@
+
+
+# Font-variant ->  mengubah font menjadi small caps
+
+
+Contoh : 
+
+p{ font-variant: small-caps; }

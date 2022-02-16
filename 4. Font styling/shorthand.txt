@@ -1,0 +1,11 @@
+
+
+# shorthand/singkatan
+
+{font-style font-variant font-weight font-size(wajib)/line-height font-family(wajib)}
+
+
+Contoh : 
+
+p{ font: italic normal bold 16px/18px helvetica, serif; }
+

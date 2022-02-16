@@ -1,0 +1,13 @@
+
+
+
+#Opacity
+
+CSS3 mengenalkan properti opacity yang dapat menspesifikasikan nilai transparan pada elemen HTML. Nilai dari properti opacity merupakan angka desimal antara 0.0 hingga 1.0, jika kita menetapkan nilainya 0.5 itu berarti 50% transparan.
+
+
+
+div {
+   background-color: red;
+   opacity: 0.5;
+}

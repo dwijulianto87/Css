@@ -1,0 +1,8 @@
+
+
+# letter-spacing -> mengatur spasi antar huruf
+
+
+Contoh : 
+
+p{ letter-spacing: normal; }

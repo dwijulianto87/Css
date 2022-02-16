@@ -1,0 +1,8 @@
+
+
+# Font-weight ->  mengatur ketebalan font 
+
+
+Contoh : 
+
+p{ font-weight: bold; }

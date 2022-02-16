@@ -1,0 +1,26 @@
+
+
+@ text-decoration -> mengatur dekorasi pada text  (none/underline/overline/line-through
+
+
+a. text-decoration: underline
+
+Memberikan garis bawah (underline) pada teks
+
+b. text-decoration: overline
+
+Memberikan garis atas (overline) pada teks
+
+c. text-decoration: line-through
+
+Memberikan efek tulisan dicoret (strikethrough)
+
+d. text-decoration: none
+
+Menghilangkan dekorasi teks yang ada pada elemen
+
+
+
+Contoh : 
+
+p{ text-decoration: underline; }

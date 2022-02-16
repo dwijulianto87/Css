@@ -1,0 +1,25 @@
+
+
+# text-transform -> mengubah jenis guruf menjadi besar, kecil/kapital
+
+a. text-transform: none
+
+Teks yang ditampilkan sama seperti yang dituliskan
+
+b. text-transform: capitalize
+
+Membuat huruf pertama besar pada tiap katanya
+
+c. text-transform: lowercase
+
+Membuat seluruh teks menggunakan huruf kecil
+
+d. Text-transform: uppercase
+
+Membuat seluruh teks menggunakan huruf besar
+
+
+
+Contoh : 
+
+p{ text-transform: uppercase; }

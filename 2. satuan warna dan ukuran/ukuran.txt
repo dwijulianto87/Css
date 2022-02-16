@@ -1,0 +1,48 @@
+
+@ Berikut merupakan nilai satuan yang dapat kita manfaatkan dalam menetapkan ukuran font beserta fungsinya:
+
+
+1. Relative unit
+
+a. em (Font size)
+
+Satuan relatif terhadap ukuran font yang sedang digunakan pada elemen (contohnya, 2em berarti 2 kali lebih besar dari ukuran font seharusnya).
+
+b. ex (Font height)
+
+Satuan relatif terhadap tinggi font saat ini, satuan ini sangat jarang sekali digunakan
+
+c. rem (Font size)
+
+Mirip seperti em, tetapi rem merupakan satuan relatif terhadap ukuran font dari root element.
+
+d. ch (Font width)
+
+Satuan relatif terhadap lebar dari karakter “0” nol.
+
+e. vw (Viewport width)
+
+Satuan relatif terhadap 1% lebar viewport. Contoh 1vw = 1% dari lebar viewport. Satuan ini tidak didukung pada browser IE8 ke bawah.
+
+f. vh (Viewport height)
+
+Satuan relatif terhadap 1% tinggi viewport. Contoh 1vh = 1% dari tinggi viewport. Satuan ini tidak didukung pada browser IE8 ke bawah.
+
+
+
+2. Absolute unit
+
+a. px -> Menetapkan nilai font berdasarkan ukuran pixel
+
+b. pt -> Menetapkan nilai font berdasarkan points (1/72 inch di CSS2.1)
+
+c. pc -> Menetapkan nilai font berdasarkan picas (1 pica = 12 point)
+
+d. mm -> Menetapkan nilai font berdasarkan millimeters
+
+e. cm -> Menetapkan nilai font berdasarkan centimeters
+
+f. in -> Menetapkan nilai font berdasarkan inches
+
+
+

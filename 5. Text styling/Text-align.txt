@@ -1,0 +1,26 @@
+
+
+@ Text-align -> mengatur format paragraf/text (kiri-tengah-kanan)
+
+
+a. text-align: left
+
+Membuat perataan teks pada ujung kiri
+
+b. text-align: right
+
+Membuat perataan teks pada ujung kanan
+
+c. text-align: center
+
+Membuat perataan teks secara menengah
+
+d. text-align: justify
+
+Membuat perataan teks yang setara pada ujung kiri dan kanannya
+
+
+
+Contoh : 
+
+p{ text-align : center; }

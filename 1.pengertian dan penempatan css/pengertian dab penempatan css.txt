@@ -1,0 +1,41 @@
+Css (Cascading Style Sheets) adalah Bahasa yang digunakan untuk mengatur dan mempercantik tampilan pada website.
+
+#penempatan :
+1. embed 
+
+<head>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+    </style>
+........
+</head>
+
+
+2. inline
+
+<div style="height: 100px;  background: red; padding: 20px;">
+
+
+
+3. eksternal
+
+<head>
+    <link rel="stylesheet" href="style.css">
+.......
+</head>
+
+
+-file eksternal harus berexstensi .css
+-contoh isi dari file css : 
+	body{ color: black; }
+	.img{ height: 100px; width: 100px; }
+
+
+
+# Rule adalah aturan yang berisi selector beserta deklarasi style dan nilainya 
+
+contoh :
+
+h1{ color : black; } // rule dengan selektor element h1

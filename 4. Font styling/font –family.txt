@@ -1,0 +1,44 @@
+
+
+@ Font –family  -> mengatur jenis font 
+
+# Generic 
+ 
+a. serif : jenis font yang memiliki runcing pada garis akhir karakternya. Times New Roman merupakan salah satu jenis serif font.
+
+b. sans-serif : jenis font yang tidak meruncing pada garis akhir karakternya. Contohnya “Open Sans”, “Fira Sans” dan lainnya.
+
+c. monospace : jenis font yang memiliki nilai lebar tiap karakternya sama. Consolas merupakan salah satu jenisnya.
+
+d. cursive: jenis font yang tampak seperti handwriting atau hasil tulisan tangan.
+
+e. fantasy : jenis font yang merepresentasikan karakteristik yang menyenangkan.
+
+f. system-ui : jika menerapkan nilai ini maka font yang diterapkan akan sama seperti font yang digunakan pada sistem operasi kita.
+
+g. math : jenis font yang digunakan untuk penulisan rumus-rumus matematika.
+
+h. emoji : jenis font yang digunakan untuk menampilkan emoji.
+
+i. fangsong : jenis font yang menampilkan gaya penulisan Chinese.
+
+
+#  web safe font
+
+a. Arial (sans-serif)
+b. Verdana (sans-serif)
+c. Helvetica (sans-serif)
+d. Tahoma (sans-serif)
+e. Trebuchet MS (sans-serif)
+f. Times New Roman (serif)
+g. Georgia (serif)
+h. Garamond (serif)
+i. Courier New (monospace)
+j. Brush Script MT (cursive)
+
+
+
+Contoh : 
+
+p{ font-family : “Open sans”, Arial, sans-serif; }
+

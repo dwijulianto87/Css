@@ -1,0 +1,8 @@
+
+
+# Line-height -> mengatur spasi  antar baris
+
+
+Contoh : 
+
+p{ line-height : 5px; }

@@ -1,0 +1,8 @@
+
+
+# color -> memberi warna pada tulisan
+
+
+Contoh : 
+
+p{ color : black; }

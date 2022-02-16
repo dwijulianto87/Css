@@ -1,0 +1,165 @@
+
+@ Inheritance
+  Styling HTML bersifat inheritance yang artinya dapat mewarisi properti style “tertentu” pada elemen yang ada di dalamnya. Contohnya pada rules yang kita tuliskan untuk elemen <body> akan diterapkan pada seluruh elemen yang ada di dalam elemennya (body)
+
+# Group Selector
+  Jika kita menerapkan rule yang sama pada beberapa selector yang berbeda, di CSS kita dapat menggabungkan selector tersebut sehingga dapat meminimalisir penulisan kode yang berulang. 
+  contoh : 
+
+  h1, h2, p { color: black; }
+
+# Combinators
+  Ada empat kombinator yang dapat kita gunakan yaitu: Adjacent Sibling Selector, General Sibling Selector, Child Selector, dan Descendant Selector.
+
+  1. Adjacent Sibling Selector (+)
+     Adjacent Sibling Selector menggabungkan dua buah basic selector dengan menggunakan tanda + di antara keduanya.
+     namun hanya elemen kedua yang menerapkan rule selama elemen tersebut dituliskan langsung setelah elemen pertama pada berkas HTML. Selain itu kedua elemen tersebut harus berada di dalam induk elemen yang sama.
+
+	 /* Rule akan diterapkan pada elemen paragraf yang berada tepat setelah elemen img */
+	img + p {
+   		color: green;
+	}
+
+  2. General Sibling Selector (~)
+     Mirip seperti Adjacent Sibling Selector namun rules akan diterapkan pada seluruh elemen kedua yang berada setelah elemen pertama. Dengan catatan, induknya sama, walaupun posisi dari elemen kedua tidak berada tepat setelahnya.
+
+	/* Rule akan diterapkan pada elemen header yang berada tepat setelah elemen img */
+	img ~ p {
+   		color: green;
+	}
+     
+
+
+  3. General Sibling Selector (~)
+     Mirip seperti Adjacent Sibling Selector namun rules akan diterapkan pada seluruh elemen kedua yang berada setelah elemen pertama. Dengan catatan, induknya sama, walaupun posisi dari elemen kedua tidak berada tepat setelahnya.
+
+	/* Rule akan diterapkan pada elemen header yang berada tepat setelah elemen img */
+	img ~ p {
+   		color: green;
+	}
+
+
+
+  4. Child Selector (>)
+     Child Selector menggabungkan dua buah basic selector dengan menggunakan tanda greater than (>) di antara basic selector-nya.
+
+	/* Rule akan diterapkan pada seluruh elemen p yang berada tepat setelah elemen div */
+	div > p {
+   		color: green;
+	}
+
+
+  5. Descendant Selector (space)
+     Descendant Selector mirip seperti child selector namun hierarkinya lebih luas, karena rule akan diterapkan pada seluruh elemen yang menjadi turunannya walaupun secara tidak langsung.
+
+	/* Rule akan diterapkan pada seluruh elemen p yang berada tepat setelah elemen div, walaupun tidak secara langsung */
+	div p {
+   		color: green;
+	}
+
+# Rule order
+  Konflik dapat terjadi karena kita dapat menerapkan beberapa styling pada satu dokumen HTML.
+  > !important -> Tetapi kita bisa membuat sebuah property styling agar dianggap penting oleh browser untuk diterapkan dan tidak memperhatikan urutan. Kita bisa menambahkan keyword !important pada akhir nilai propertinya. 
+
+  contoh : 
+
+     <style>
+       p {
+           color: red !important;
+       }
+ 
+       p {
+           color: blue;
+       }
+   </style>
+
+
+# Pseudo-class
+  Pseudo-class merupakan sebuah class “semu” yang sebenarnya ada pada tiap elemen HTML.
+  
+  1. a:link { color: green;}
+     rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi
+
+  2. a:visited { color: green;}
+     aturan akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi 
+
+  3. a:hover {color:blue;}
+     rule akan diterapkan pada sebuah tautan ketika diarahkan dengan kursor
+
+  4. a:active {color:blue;}
+     rule akan diterapkan pada sebuah tautan ketika ditekan
+
+
+# Pseudo-elemen Selector
+  Sama seperti pseudo-class, pseudo-elemen merupakan sebuah elemen “semu” yang sebenarnya ada tetapi tidak tampak secara tertulis pada berkas HTML.
+  ::before dan ::after
+
+  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error explicabo ipsum molestiae necessitatibus nesciunt possimus reprehenderit sed voluptates. Aliquam aspernatur autem est nobis officia praesentium quas recusandae rem.</blockquote>
+
+
+  <style>
+
+	blockquote::before,
+	blockquote::after {
+   			content: '"';
+   			font-size: 24px;
+   			font-style: italic;
+   			font-weight: bold;
+	}
+  </style>
+
+
+
+# Selector Basic ->  target element yang akan diberikan style css
+
+1. Type Selector -> nama element html (h1, div...)
+
+2. Class Selector -> diawali dengan titik (.nameClass)
+
+3. ID Selector -> diawali dengan hash (#nameId)
+
+4. Attribute Selector -> berdasarkan sebuah atribut element 
+   a. [attr] -> Menargetkan elemen yang menerapkan atribut attr.
+	contoh : a[href]
+   b. [attr=value] -> Menargetkan elemen yang menerapkan atribut attr dengan nilai value
+	 contoh : a[href^="#"]
+   c. [attr~=value] -> Menargetkan elemen yang menerapkan atribut attr dengan salah satu nilainya adalah value.
+	 contoh : a[href*="insensitive" i]
+   d. [attr^=value] -> Menargetkan elemen yang menerapkan atribut attr yang nilainya diawali dengan nilai value.
+   	contoh : a[href^="#"]
+   e. [attr$=value] -> Menargetkan elemen yang menerapkan atribut attr yang nilainya diakhiri dengan value.
+	contoh : a[href$=".org"]   
+   f. [attr*=value] -> Menargetkan elemen yang menerapkan atribut attr yang nilainya mengadung value.
+	contoh : a[href*="example"]
+
+5.  Universal Selector ->   digunakan untuk diterapkan pada seluruh elemen. 
+    Tetapi selector ini juga bisa secara spesifik menargetkan sebuah elemen dengan menggabungkan bersama selector yang lainnya
+
+
+    contoh :
+
+ <style>
+       /* Menargetkan seluruh tipe elemen */
+       * {
+           color: green;
+       }
+	/* Menargetkan seluruh tipe elemen yang mengandung nilai "en" pada atribut lang */
+ 
+       *[lang^=en] {
+           font-style: italic;
+       }
+ 
+       /* Menargetkan seluruh tipe elemen yang memiliki nilai "warning" pada atribut class */
+       *.warning {
+           color: red;
+       }
+ 
+       /* Menargetkan seluruh tipe elemen yang memiliki nilai "content" pada atribut id */
+       *#content {
+           border: 1px solid blue;
+           padding: 20px;
+       }
+ 
+   </style>
+
+

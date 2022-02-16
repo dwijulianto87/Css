@@ -1,0 +1,9 @@
+
+
+
+# Font-style ->  mengubah font menjadi bercetak miring
+
+
+Contoh : 
+
+p{ font-style : italic; }

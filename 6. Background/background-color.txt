@@ -1,0 +1,8 @@
+
+
+# background-color -> mengatur warna pada backgound
+
+
+Contoh : 
+
+p{ background-color: blueviolet; }
