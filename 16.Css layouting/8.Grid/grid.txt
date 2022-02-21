@@ -1,0 +1,124 @@
+
+
+
+A. Css grid adalah modul css untuk mendefinisikan sistem layout yang berbentuk grid dalam dua dimensi (baris & kolom)
+
+B. grid container adalah elemen pembungkus grid, didefinisikan dengan 
+	<style>	
+		display: grid;
+	</style>	
+
+C. grid item adalah elemen-elemen yang berada didilam grid container
+
+D. grid line adalah garis horizontal(kolom) atau vertikal(baris)yang memisahkan grid menjadi beberapa bagian dan ditandai dengan angka
+
+E. grid cell adalah perpotongan/pertemuan antara baris dan kolom didalam grid
+
+F. grid area adalah kumpulan lebih dari satu cell yang membentuk kotak
+
+G. grid track adalah ukuran atau jarak antara 2 grid line, bisa kolom atau baris
+
+H. grid gap adalah jarak antara grid track/cell
+
+I. properti container
+
+    grid-template-columns: px, %, auto fr; // membuat kolom(horizontal)
+    grid-template-rows: px, %, auto fr; // membuat baris(vertical)
+    grid-auto-columns: px, %, auto fr; // mengatur ukuran yang tidak ditulis grid-template 
+    grid-auto-rows: px, %, auto fr; // mengatur ukuran yang tidak ditulis grid-template
+    grid-auto-flow: row | column | row-dense | column dense; // mengatur penempatan item/cell
+    grid-template-areas: ; // mendefinisikan grid tamplate menggunakan nama dari area yang ditulis pada properti grid-area pada item
+    grid-template-areas:     'nav nav nav'
+                            'sidebar main main'
+                            'sidebar main main'
+                            'footer footer footer';
+                            
+    grid-template: ; // shorthand (gtr gta gtc)
+    grid-column-gap: ; // jarak antar kolom
+    grid-row-gap: ; // jarak antar baris
+    grid-gap: ; // jarak antar cell
+    grid: ; // shorthand keseluruhan
+    justify-items: star | end | center | stretch; // mengatur kesejajaran antar item secara horizontal
+    align-items: star | end | center | stretch; // mengatur kesejajaran antar item secara vertical
+    place-items: star | end | center | stretch; // shorthand (justify-items dan align-items)
+ 
+    justify-content:  star | end | center | stretch | space-around | space-between | space-evenly; // mengatur posisi seluruh grid container pada sumbu horizontal
+    bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran containernya, biasanya ketikan grid items menggunakan ukuran (px)
+ 
+    align-content: star | end | center | stretch | space-around | space-between | space-evenly; // mengatur posisi seluruh grid container pada sumbu vertical
+    bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran containernya, biasanya ketikan grid items menggunakan ukuran (px)
+    place-content: star | end | center | stretch | space-around | space-between | space-evenly; // shorthand (justity-content dan align-content)
+
+
+J. properti item
+
+    grid-column-start: ; // menentukan tempat dari grid item dengan mengacu pada nomor atau nama grid line  yang spesifik
+    grid-column-end: ;
+    grid-row-start: ;
+    grid-row-end: ;
+    grid-column: ;
+    grid-row: ;
+    grid-area: ;
+    justify-self: start;
+    align-self: start;
+    place-self: ;
+ 
+ 
+K. special function & keyword
+ 
+     
+ 
+     /* repeat() => membuat ukuran grid track berdasarkan content pada sebuah item */
+     /* grid-template-columns: repeat(4, 1fr) repeat(3, 1fr);  */
+ 
+     /* min-content | max-content  => membuat ukuran secara berulang */
+     /* grid-template-columns: 2fr min-content 3fr;  */
+     /* grid-template-columns: 2fr max-content 3fr;  */
+ 
+     /* auto-fill | auto-fit  => menentukan jumlah item untuk berada pada grid track */
+     /* grid-template-columns: repeat(auto-fit, 150px);  */
+ 
+     /* minmax()  => menentukan ukuran minimal dan maksimal pada grid track */
+     /* grid-template-columns: minmax(300px, 500px);  */
+ /* } */
+ 
+
+
+
+
+contoh : 
+
+.container{
+    text-align: center;
+    color: white;
+    margin: auto;
+    display: grid;  //inisiasi grid container
+    grid-template-columns: repeat(3, 1fr); // memebuat 3 kolom masing-masing ukuran 1fr
+    grid-template-areas:'nav nav nav'  // kolom 1,2,3 diisi element nav 
+                        'sidebar main main'  // kolom 1 diisi element sidebar dan 2,3 diisi main
+                        'sidebar main main'  // kolom 1 diisi element sidebar dan 2,3 diisi main
+                        'footer footer footer';  // kolom 1,2,3 diisi element footer 
+    border: 2px solid black;
+    grid-template-rows: 50px 200px 200px 50px; // memberi ukuran tiap-tiap baris
+}
+ 
+.sidebar{
+    background-color: aqua;
+    grid-area: sidebar;  //inisiasi grid item dengan nama sidebar
+}
+ 
+.main{
+    background-color:red;
+    grid-area: main;  //inisiasi grid item dengan nama main
+}
+ 
+.nav{
+    background-color:green;
+    grid-area: nav;  //inisiasi grid item dengan nama nav
+}
+ 
+.footer{
+    background-color:black;
+    grid-area: footer;  //inisiasi grid item dengan nama footer
+}
+

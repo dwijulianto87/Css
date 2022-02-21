@@ -1,0 +1,10 @@
+
+
+# color -> memberi warna pada tulisan
+
+
+Contoh : 
+
+p{ color : black; } 
+
+a{ color : inherit; } //inherit adalah pewarisan value color dari parent yang diberikan untuk selector element <a> 

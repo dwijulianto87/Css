@@ -1,0 +1,25 @@
+
+
+
+# vendor prefix
+  vendor prefix adalah tehnik css 3 yang digunakan untuk membuat sintax css3 kompatibel disemua browser
+  http://shouldiprefix.com/
+
+
+# property tiap browser
+-webkit- (Chrome, Safari, newer versions of Opera, almost all iOS browsers including Firefox for iOS; basically, any WebKit based browser)
+-moz- (Firefox)
+-o- (old pre-WebKit versions of Opera)
+-ms- (Internet Explorer and Microsoft Edge)
+
+contoh :
+
+.box {
+  background: url(image1.png), url(image2.png), url(image3.png) #FFF;
+  background-clip: border-box;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-origin: padding-box;
+  background-size: cover;
+}

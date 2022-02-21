@@ -39,3 +39,5 @@ Css (Cascading Style Sheets) adalah Bahasa yang digunakan untuk mengatur dan mem
 contoh :
 
 h1{ color : black; } // rule dengan selektor element h1
+
+

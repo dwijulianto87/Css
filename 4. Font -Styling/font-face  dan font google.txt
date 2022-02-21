@@ -1,0 +1,75 @@
+
+
+https://fonts.google.com/
+
+https://fontsquirrel.com
+
+1. embeded html
+
+   > buka link diatas, cari dan copy font yang dipilih, lalu paste di element <head> html
+
+	<html>
+	   <head>
+	     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+	     CSS rules to specify families
+	     .............
+	   </head>
+	     ...............
+	</html>
+
+  > pemakaian di css 
+
+	body{
+    	   font-family: 'Montserrat', sans-serif;
+	}
+
+
+
+2. import Css
+
+   > buka link diatas, cari dan copy font yang dipilih, lalu paste di element <head> html
+
+	<style>
+	     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+	     .............
+
+	     body{
+    	        font-family: 'Montserrat', sans-serif;
+	     }
+
+	     .............
+	<style>
+
+
+
+
+3. font-face
+
+>  download file - extrak dan simpan difolder yang di pilih
+
+   <style>
+
+	@font-face {
+		font-family: 'Alex Brush'; // nama font
+		src: url(alex-brush/AlexBrush-Regular.ttf)format(truetype);  // sumber file font di folder local
+	}
+
+	.................
+
+	body {
+    		font-family:'Alex Brush';
+	}
+
+   <style>
+
+
+
+
+
+
+
+
+
+
+
+

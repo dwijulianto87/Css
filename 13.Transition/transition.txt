@@ -1,0 +1,31 @@
+
+
+
+Transition
+transition adalah properti css untuk mengubah nilai elemen html secara halus
+
+transition: [properti ] <durasi(s/ms)> [function ] [delay];
+
+properti yang tidak bisa transition secara halus : font-family, display, position
+
+timing function : ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier(w, x, y, z)
+
+contoh :
+
+.container{
+    height: 130px;
+    border: 1px solid black;
+}
+
+.box{
+    transition: margin-left .4s;
+    background: red;
+    height: 100px;
+    width: 100px;
+}
+
+div.container:hover .box{
+	transform: rotate(180deg);
+	margin-left: 700px;
+	background: blue;
+}

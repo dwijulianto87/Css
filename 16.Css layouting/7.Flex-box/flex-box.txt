@@ -1,0 +1,87 @@
+
+@ Flexbox
+
+flexbox adalah subuah modul 1 dimensi yang digunakan untuk menyusun, mensejajarkan dan mendistribusikan jarak antar item dalam sebuah container, meskipun ukurannya dinamis atau bahkan kita tidak tau.
+
+> main axis ? sumbu horizontal
+> cross axis ? sumbu vertical 
+
+
+Berikut beberapa konsep dari flexbox yang perlu kita ketahui:
+
+-> Dapat mengubah ukuran dimensi elemen dengan menyesuaikan ukuran yang cocok bagi ruang kosong yang ada pada container-nya.
+-> Flexbox is directional agnostic. ini berbeda dengan konsep block model di mana elemen selalu ditampilkan secara vertikal dengan membuat baris baru. Ini berbeda pula dengan konsep inline model di mana elemen selalu ditampilkan secara horizontal. Dengan flexbox kita dapat melakukan kedua hal tersebut dengan mudah.
+-> Dibuat untuk menyusun layout yang mobile friendly.
+
+
+
+1.Flex Container
+  Flex container merupakan sebuah elemen yang menampung beberapa flex item. Karena Parent-child merupakan relasi yang wajib ada dalam penerapan flexbox, maka setiap flex item harus merupakan anak / child dari flex container.
+
+
+property dan value flex container :
+
+a. display: flex; 
+
+b. flex-direction: column; // mengatur item(baris/kolom)
+ row | row-reverse | column | column-reverse
+ 
+c. flex-wrap: wrap;// mengatur item untuk ganti baris bila ukuran tak cukup
+ nowrap | wrap | wrap-reverse
+
+d. flex-flow: column wrap; // shorthand for the flex-direction and flex-wrap 
+
+
+e. justify-content: center; // mengatur kesejajaran antar item secara horizontal
+flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe
+
+
+
+f. align-items: flex-end;// mengatur kesejajaran antar item secara vertical
+stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end
+
+g. align-content: space-between;// mengatur kesejajaran antar item secara vertical jika content lebih dari satu baris
+flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe
+
+h. gap, row-gap, column-gap // mengatur jarak antar item
+
+contoh :
+	.container {
+  		display: flex;
+  		...
+  		gap: 10px;
+  		gap: 10px 20px; /* row-gap column gap */
+  		row-gap: 10px;
+  		column-gap: 20px;
+	}
+
+
+
+
+
+2.Flex Item
+  Flex item merupakan sebuah elemen yang berada didalam flex container
+
+property dan value flex item :
+
+a. order:2; //mengatur urutan item
+
+b. flex-grow:1; // mengatur ukuran item
+
+c. flex-basis: 25% | auto; // mengatur ukuran item
+
+d. align-self: flex-start; mengatu item secara vertical
+   auto | flex-start | flex-end | center | baseline | stretch
+
+
+contoh :
+
+	.item-satu{
+		order:2;
+		flex-grow:1;
+		align-self: flex-start;
+	}
+
+
+
+

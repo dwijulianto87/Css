@@ -1,0 +1,62 @@
+
+
+#  Responsif
+
+@ Viewport
+  - Viewport merupakan area yang dapat dilihat oleh pengguna kita pada halaman website. Ukuran viewport bervariasi berdasarkan device-nya. Ukuran viewport pada sebuah peranti mobile, lebih kecil dibandingkan dengan layar komputer.
+  - Mengatur viewport dapat melalui sebuah tag <meta> yang disisipkan pada head berkas html. Silakan buka berkas index.html kemudian tambahkan script berikut di dalam <head>.'
+
+@ Media Query
+  - CSS menyediakan sebuah fitur yang dapat kita gunakan untuk menentukan rule hanya pada ukuran viewport tertentu. Fitur tersebut dinamakan CSS Media Queries
+
+
+1. buka browser - ctrl+shift+i - click icon handphone - pilih dimensi
+
+2. tambahkan viewport didalam element head
+
+   <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+
+3. menambahkan media query di file css
+
+	contoh:
+
+   /* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 1000px */
+	@media screen and (max-width: 1000px) {
+   		#content,
+   		aside {
+       			width: 100%;
+       			padding: 0;
+   		}
+	}
+
+
+
+
+a. Phone
+   @media (min-width: 320px) and (max-width: 767px){ …. isi style …..}
+   Ukuran diatas biasa digunakan untuk Ponsel pada umumnya dengan ukuran rentang antara 320px — 767px
+
+b. Phone Landscape
+   @media (min-width: 320px) and (max-width: 767px) and (orientation: landscape){ …. isi style …..}
+   Ukuran diatas masih sama akan menampung resolusi ponsel pada umumnya tetapi karena ditambah logika khusus “orientation: landscape” maka artinya style didalamnya hanya untuk layar ketika mode landscape saja yang akan berpengaruh
+
+c. Tablet
+   @media (min-width: 768px) and (max-width: 1024px){….isi style….}
+   Ukuran tersebut berlaku untuk device dengan rentang lebar 768px — 1042px
+
+d. Tablet Landscape
+   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){….isi style….}
+
+
+
+
+
+
+
+
+
+
+
+

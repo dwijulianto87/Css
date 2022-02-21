@@ -1,0 +1,46 @@
+
+
+# Positioning
+
+  properti position digunakan untuk mengontrol letak elemen html.
+  CSS memiliki dua buah flow yang bisa digunakan untuk menampilkan elemen, yakni static dan non-static.
+  
+  1. Static Flow / Normal Flow
+     Dalam flow normal, setiap elemen block ditempatkan di bawah elemen sebelumnya. Karena ini merupakan cara standar browser memperlakukan elemen HTML, kita tidak perlu menetapkan nilai properti position ketika ingin membuat perilaku seperti ini tetapi secara sintaks perilaku ini ditetapkan dengan nilai static
+
+  2. Non Static Flow
+     dalam out of flow, element diangkat dari luar static flow, Sehingga elemen tersebut dapat leluasa berpindah posisi tanpa mempengaruhi elemen yang berada pada static flow.
+     Untuk mengubah posisi elemen yang berada di non-static flow, kita dapat menggunakan properti top, right, bottom, maupun left.
+
+
+
+
+Berikut nilai dari properti position yang ada pada CSS:
+
+  a. Normal Flow / Static Flow : Merupakan default behaviour yang dimiliki elemen, di mana setiap elemen block akan ditampilkan dalam baris baru ketika dibuat. Sehingga setiap elemen block selalu muncul di bawah dari elemen block sebelumnya. Bahkan jika masih terdapat ruang kosong pada samping elemennya, mereka tidak akan nampak bersebelahan.
+
+  b. Relative Positioning / Non Static Flow : Membuat elemen bisa berpindah posisi ke atas, kanan, bawah, maupun kiri dari posisi semula atau posisi seharusnya elemen tersebut berada. Perpindahan posisi ini tidak akan berpengaruh terhadap posisi elemen di sekitarnya karena ketika menggunakan relative positioning, elemen tersebut akan dipindahkan dari normal flow.
+
+  c. Absolute Positioning / Non Static Flow : Sama seperti relative, elemen akan dipindahkan keluar dari normal flow sehingga kita dapat memindahkan posisi elemen ke atas, kanan, bawah, maupun kiri secara leluasa tanpa mengganggu elemen di sekitarnya. Namun posisinya relatif pada jendela browser dan induk elemen selama induk elemen juga berada di luar dari normal flow.
+
+  d. Fixed Positioning / Non Static Flow : Merupakan absolute position namun posisinya selalu relatif pada jendela browser. Bahkan ketika pengguna scrolling pun, posisinya di layar akan tetap tak berubah. 
+
+  e. sticky positioning / Non Static Flow : merupakan nilai kombinasi dari relative positioning dan fixed positioning.
+
+ 
+
+
+contoh :
+
+nav {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     height: 50px;
+}
+
+
+
+
+

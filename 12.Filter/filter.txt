@@ -1,0 +1,46 @@
+
+
+Filter
+filter adalah properti css3 yang digunakan untuk memberikan efek visual  pada gambar, background atau border
+
+> filter: <tipe-filter>;
+
+tipe-filter:
+ 
+> none	Default value
+
+> blur(px)	
+
+> brightness(%)	
+
+> contrast(%)	
+
+> grayscale(%)	//abu
+
+> hue-rotate(deg)//rotasi warna
+
+> invert(%) //negative film
+
+> opacity(%) //transparant
+
+> saturate(%)//ketajaman
+
+> sepia(%) //kekuningan
+
+> url()	The url() function takes the location of an XML file that specifies an SVG filter, and may include an anchor to a specific filter element. Example:
+
+> initial	Sets this property to its default value. Read about initial	
+
+> inherit	Inherits this property from its parent element. Read about inherit
+
+
+
+
+contoh :
+
+img {
+  filter: blur(5px);
+}
+
+
+

@@ -2,16 +2,12 @@
 @ Inheritance
   Styling HTML bersifat inheritance yang artinya dapat mewarisi properti style “tertentu” pada elemen yang ada di dalamnya. Contohnya pada rules yang kita tuliskan untuk elemen <body> akan diterapkan pada seluruh elemen yang ada di dalam elemennya (body)
 
-# Group Selector
-  Jika kita menerapkan rule yang sama pada beberapa selector yang berbeda, di CSS kita dapat menggabungkan selector tersebut sehingga dapat meminimalisir penulisan kode yang berulang. 
-  contoh : 
 
-  h1, h2, p { color: black; }
 
-# Combinators
+1. Combinators
   Ada empat kombinator yang dapat kita gunakan yaitu: Adjacent Sibling Selector, General Sibling Selector, Child Selector, dan Descendant Selector.
 
-  1. Adjacent Sibling Selector (+)
+  a. Adjacent Sibling Selector (+)
      Adjacent Sibling Selector menggabungkan dua buah basic selector dengan menggunakan tanda + di antara keduanya.
      namun hanya elemen kedua yang menerapkan rule selama elemen tersebut dituliskan langsung setelah elemen pertama pada berkas HTML. Selain itu kedua elemen tersebut harus berada di dalam induk elemen yang sama.
 
@@ -20,17 +16,7 @@
    		color: green;
 	}
 
-  2. General Sibling Selector (~)
-     Mirip seperti Adjacent Sibling Selector namun rules akan diterapkan pada seluruh elemen kedua yang berada setelah elemen pertama. Dengan catatan, induknya sama, walaupun posisi dari elemen kedua tidak berada tepat setelahnya.
-
-	/* Rule akan diterapkan pada elemen header yang berada tepat setelah elemen img */
-	img ~ p {
-   		color: green;
-	}
-     
-
-
-  3. General Sibling Selector (~)
+  b. General Sibling Selector (~)
      Mirip seperti Adjacent Sibling Selector namun rules akan diterapkan pada seluruh elemen kedua yang berada setelah elemen pertama. Dengan catatan, induknya sama, walaupun posisi dari elemen kedua tidak berada tepat setelahnya.
 
 	/* Rule akan diterapkan pada elemen header yang berada tepat setelah elemen img */
@@ -38,9 +24,15 @@
    		color: green;
 	}
 
+  c. Descendant Selector (space)
+     Descendant Selector mirip seperti child selector namun hierarkinya lebih luas, karena rule akan diterapkan pada seluruh elemen yang menjadi turunannya walaupun secara tidak langsung.
 
+	/* Rule akan diterapkan pada seluruh elemen p yang berada tepat setelah elemen div, walaupun tidak secara langsung */
+	div p {
+   		color: green;
+	}
 
-  4. Child Selector (>)
+  d. Child Selector (>)
      Child Selector menggabungkan dua buah basic selector dengan menggunakan tanda greater than (>) di antara basic selector-nya.
 
 	/* Rule akan diterapkan pada seluruh elemen p yang berada tepat setelah elemen div */
@@ -49,15 +41,9 @@
 	}
 
 
-  5. Descendant Selector (space)
-     Descendant Selector mirip seperti child selector namun hierarkinya lebih luas, karena rule akan diterapkan pada seluruh elemen yang menjadi turunannya walaupun secara tidak langsung.
 
-	/* Rule akan diterapkan pada seluruh elemen p yang berada tepat setelah elemen div, walaupun tidak secara langsung */
-	div p {
-   		color: green;
-	}
 
-# Rule order
+2. Rule order
   Konflik dapat terjadi karena kita dapat menerapkan beberapa styling pada satu dokumen HTML.
   > !important -> Tetapi kita bisa membuat sebuah property styling agar dianggap penting oleh browser untuk diterapkan dan tidak memperhatikan urutan. Kita bisa menambahkan keyword !important pada akhir nilai propertinya. 
 
@@ -74,25 +60,86 @@
    </style>
 
 
-# Pseudo-class
-  Pseudo-class merupakan sebuah class “semu” yang sebenarnya ada pada tiap elemen HTML.
+3. Pseudo-class
+   Pseudo-class merupakan sebuah class “semu” yang sebenarnya ada pada tiap elemen HTML.
   
-  1. a:link { color: green;}
+  a. :link
      rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi
 
-  2. a:visited { color: green;}
+	contoh : a:link { color: green;}
+
+  b. :visited
      aturan akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi 
 
-  3. a:hover {color:blue;}
+	contoh : a:visited { color: green;}
+
+  c. :hover
      rule akan diterapkan pada sebuah tautan ketika diarahkan dengan kursor
 
-  4. a:active {color:blue;}
+	contoh : a:hover {color:blue;}
+
+  d. :active
      rule akan diterapkan pada sebuah tautan ketika ditekan
 
+	contoh : a:active {color:blue;}
 
-# Pseudo-elemen Selector
-  Sama seperti pseudo-class, pseudo-elemen merupakan sebuah elemen “semu” yang sebenarnya ada tetapi tidak tampak secara tertulis pada berkas HTML.
-  ::before dan ::after
+  e. :first-child 
+     memilih element pertama dari sebuah parent (element pembungkus)
+
+	contoh : li:first-child a {color:blue;} // jika ada 6 <li><a></li> (<li><a></li> ke 1 yang berwarna merah) 
+
+
+  f. :last-child
+     memilih element terakhir dari sebuah parent (element pembungkus)
+
+	contoh : li:last-child a {color:red;} // jika ada 6 <li><a></li> (<li><a></li> ke 6 yang berwarna merah) 
+
+
+  g. :nth-child (n)
+     memilih element ke-n  dari sebuah parent (element pembungkus)
+
+	contoh : li:nth-child(2) a {color: red;} // jika ada 6 <li><a></li> (<li><a></li> ke 2 yang berwarna merah) 
+
+
+  h. :nth-child(3n)
+     memilih element kelipatan ke-n dari sebuah parent (element pembungkus)
+
+	contoh : li:nth-child(3n) a {color: red;} // jika ada 6 <li><a></li> (<li><a></li> ke 3 dan 6 yang berwarna merah) 
+
+  i. :nth-child(even)
+     memilih element genap dari sebuah parent (element pembungkus)
+
+	contoh : li:nth-child(even) a {color: red;} // jika ada 6 <li><a></li> (<li><a></li> ke 2, 4, 6 yang berwarna merah) 
+
+  j. :nth-child(odd)
+     memilih element ganjil dari sebuah parent (element pembungkus)
+
+	contoh : li:nth-child(even) a {color: red;} // jika ada 6 <li><a></li> (<li><a></li> ke 1, 3, 5 yang berwarna merah) 
+
+  k. :nth-child(3n+2)
+     memilih element dengan kelipatan 3 dimulai dari elemen ke 2 dari sebuah parent (element pembungkus)
+
+	contoh : li:nth-child(even) a {color: red;} // jika ada 6 <li><a></li> (<li><a></li> ke 2, 5 yang berwarna merah) 
+
+  l. :first-of-type
+     memilih element pertama dari sebuah jenis/tipe tag
+
+	contoh :  p:first-of-type{color: red;} // jika ada 6 p (p ke 1 yang berwarna merah) 
+
+
+  m. :last-of-type
+     memilih element terakhir dari sebuah jenis/tipe tag
+
+	contoh :  p:last-of-type{color: red;} // jika ada 6 p (p ke 6 yang berwarna merah) 
+
+
+
+4. Pseudo-elemen Selector
+   Sama seperti pseudo-class, pseudo-elemen merupakan sebuah elemen “semu” yang sebenarnya ada tetapi tidak tampak secara tertulis pada berkas HTML.
+   
+   ::before dan ::after
+
+  contoh :
 
   <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error explicabo ipsum molestiae necessitatibus nesciunt possimus reprehenderit sed voluptates. Aliquam aspernatur autem est nobis officia praesentium quas recusandae rem.</blockquote>
 
@@ -110,15 +157,17 @@
 
 
 
-# Selector Basic ->  target element yang akan diberikan style css
+5. Selector Basic ->  target element yang akan diberikan style css
 
-1. Type Selector -> nama element html (h1, div...)
+a. Type Selector -> nama element html (h1, div...)
 
-2. Class Selector -> diawali dengan titik (.nameClass)
+b. Class Selector -> diawali dengan titik (.nameClass)
 
-3. ID Selector -> diawali dengan hash (#nameId)
+c. ID Selector -> diawali dengan hash (#nameId)
 
-4. Attribute Selector -> berdasarkan sebuah atribut element 
+
+6. Attribute Selector -> berdasarkan sebuah atribut element 
+
    a. [attr] -> Menargetkan elemen yang menerapkan atribut attr.
 	contoh : a[href]
    b. [attr=value] -> Menargetkan elemen yang menerapkan atribut attr dengan nilai value
@@ -132,7 +181,8 @@
    f. [attr*=value] -> Menargetkan elemen yang menerapkan atribut attr yang nilainya mengadung value.
 	contoh : a[href*="example"]
 
-5.  Universal Selector ->   digunakan untuk diterapkan pada seluruh elemen. 
+
+7.  Universal Selector (*)->   digunakan untuk diterapkan pada seluruh elemen. 
     Tetapi selector ini juga bisa secara spesifik menargetkan sebuah elemen dengan menggabungkan bersama selector yang lainnya
 
 
@@ -140,6 +190,7 @@
 
  <style>
        /* Menargetkan seluruh tipe elemen */
+
        * {
            color: green;
        }
@@ -161,5 +212,11 @@
        }
  
    </style>
+
+8. Group Selector
+   Jika kita menerapkan rule yang sama pada beberapa selector yang berbeda, di CSS kita dapat menggabungkan selector tersebut sehingga dapat meminimalisir penulisan kode yang berulang. 
+   contoh : 
+
+   h1, h2, p { color: black; }
 
 

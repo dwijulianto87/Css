@@ -1,0 +1,67 @@
+
+# Floating
+
+# float adalah properti css untuk mengatur posisi sebuah elemen. sebuah elemen dapat dipaksa untuk berada disebelah kiri atau kanan parent.(prilaku out of flow).
+  Saat diterapkan pada elemen inline, properti float juga memungkinkan elemen di sekitarnya mengelilingi elemen tersebut (wrap). 
+  
+  value : none, left, right
+
+  contoh :
+
+  .item { 
+    float : left;
+  }
+
+
+# Clear Property
+  Elemen yang menerapkan float “tidak dianggap ada” oleh induk elemen yang menaunginya karena jika menggunakan float, elemen akan dikeluarkan dari normal flow.
+
+  
+> menggunakan properti overflow
+  contoh :
+
+       .container {
+           width: 800px;
+           border: 4px solid black;
+           overflow: auto;
+       }
+ 
+       img {
+           float: left;
+           margin: 10px;
+       }
+
+> menggunakan <div> kosong setelah tag yang menggunakan properti float
+  contoh :
+
+   .clear{clear: left;} // left/right/both
+
+   <div class="container">
+      <img src="https://i.imgur.com/cs2BJzw.jpg" width="200px" alt="dicoding">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci architecto aspernatur dolorem
+       doloremque eum excepturi fuga hic, molestias obcaecati officia perferendis perspiciatis qui saepe ut velit
+       veniam vitae voluptatum.</p>
+
+       <div class="clear"></div>
+   </div>
+
+> menggunakan teknik micro clearfix
+  tambahkan class cf pada container
+   .cf:before,
+   .cf:after {
+    	content: " "; /* 1 */
+    	display: table; /* 2 */
+   }
+ 
+   .cf:after {
+    	clear: both;
+   }
+ 
+    /**
+    * For IE 6/7 only
+    * Include this rule to trigger hasLayout and contain floats.
+    */
+   .cf {
+    	*zoom: 1;
+    }
+ 

@@ -1,0 +1,16 @@
+
+
+@ Z-index
+
+  - Properti css yang berfungsi untuk order index(posisi tumpukan) suatu element
+  - semakin besar value z-index, maka posisinya menjadi paling atas 
+  - semakin kecil value z-index, maka posisinya menjadi paling bawah
+
+
+  contoh :
+
+	.dua{
+		z-index: 100;
+	}
+
+  

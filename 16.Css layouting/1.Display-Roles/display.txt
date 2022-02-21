@@ -1,0 +1,26 @@
+
+
+I. Tiap elemen HTML memiliki dua tipe yaitu block dan inline
+
+1. inline element:
+   a. Elemen HTML yang secara default tidak menambahkan baris baru ketika dibuat.
+   b. Nilai lebar dan tinggi elemen inline sebesar konten di dalamnya, dan tidak dapat diubah.
+   c. Margin dan padding hanya mempengaruhi elemen secara horizontal, tidak vertikal.
+
+2. block element:
+   a. Elemen HTML secara default menambahkan baris baru ketika dibuat.
+   b. Jika tidak diatur lebarnya, lebar dari elemen block akan memenuhi lebar dari browser atau elemen yang menaunginya.
+   c. Kita dapat mengatur dimensi dari elemen block.
+   c. Di dalam elemen block, kita dapat menyimpan tag elemen HTML lainnya.
+
+
+II.Nilai dari properti display dapat berupa:
+   a. inline : digunakan untuk mengubah elemen block berperilaku seperti elemen inline.
+   b. block : digunakan untuk mengubah elemen inline berperilaku seperti elemen block.
+   c. inline-block : membuat elemen block tidak menambahkan baris baru ketika dibuat, namun tetap mempertahankan sifat lain dari elemen block.
+   c. none : digunakan untuk menyembunyikan elemen dari halaman.
+
+
+	contoh :
+		
+	.box{ display: inline-block; }

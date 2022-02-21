@@ -1,0 +1,16 @@
+
+
+
+
+# web font generator
+
+  web font generator digunakan untuk merubah format font (woff format font khusus untuk website dan lebih ringan)
+
+
+# petunjuk
+
+1. buka https://www.fontsquirrel.com/tools/webfont-generator
+
+2. upload file checked agreement(pilih optimal)
+
+3. download your kit

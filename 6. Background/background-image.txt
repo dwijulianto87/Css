@@ -8,10 +8,38 @@
 http://subtlepatterns.com
 
 
+> Linear gradient 
+  linear gradient adalah value properti background-image  css untuk mengatur degradasi warna secara garis lurus
+
+  background-image: linear-gradient(sudut(ops) | arah(ops) warna-awal, warna-akhir);
+
+
+> Radial gradient 
+  radial gradient adalah value properti background-image  css untuk mengatur degradasi warna secara melingkar
+  
+  background-image: radial-gradient(type (ops) jangkauan (ops) at x - y warna-awal, warna-akhir , warna-n);
+
+
+
 Contoh : 
 
-p{ 
-background-image: url(gambar/bg1.jpg); 
-background-repeat: repeat-x;
-background-position: top right; 
+div{ 
+	background-image: url(gambar/bg1.jpg); 
+	background-repeat: repeat-x;
+	background-position: top right; 
 }
+
+
+
+// linear-gradient
+.box{ 
+	background-image: linear-gradient( to right, red 20%, green 40%, blue); 
+}
+
+
+
+// radial-gradient
+.box{ 
+	background-image: linear-gradient(circle farthest-side at top left, red, green); 
+}
+
